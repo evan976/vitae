@@ -3,11 +3,12 @@ import fs from 'fs-extra'
 import { createFilter } from '@rollup/pluginutils'
 import { minify as minifyHtml } from 'html-minifier-terser'
 import { createMarkdownIt, pdfBuilder, __dirname } from './index'
+import MarkdownIt from 'markdown-it'
 
 export default function plugin(options: {
   pdfName: string
   webTitle: string
-  markdown: (md: any) => void
+  markdown: (md: MarkdownIt) => void
   pdfMargin: number | Record<string, any>
 }) {
   const { pdfName, webTitle, markdown, pdfMargin } = options

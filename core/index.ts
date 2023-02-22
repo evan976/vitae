@@ -10,7 +10,7 @@ export const __dirname = dirname(__filename)
 
 export const pdfBuilder = async (options: { name?: string; margin?: number | Record<string, any> }) => {
   const { name, margin } = options
-  const browser = await puppeteer.launch({ headless: true })
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
   const url = 'file://' + resolve(__dirname, '../dist/index.html')
   await page.goto(url)
