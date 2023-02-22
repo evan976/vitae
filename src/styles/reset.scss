@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: '阿里巴巴普惠体 2 55 Regular', '微软雅黑', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 16px;
@@ -15,7 +20,7 @@ b,
 strong,
 em {
   font-weight: bold;
-  color: var(--primary-color);
+  color: #1b4255;
 }
 
 h1 {
@@ -37,4 +42,8 @@ a {
 
 code {
   white-space: nowrap;
+}
+
+ul li, ol li {
+  list-style-type: none;
 }
