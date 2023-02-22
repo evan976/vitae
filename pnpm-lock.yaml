@@ -2,6 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   '@rollup/pluginutils': ^5.0.2
+  '@types/fs-extra': ^11.0.1
+  '@types/html-minifier-terser': ^7.0.0
+  '@types/markdown-it': ^12.2.3
+  '@types/markdown-it-attrs': ^4.1.0
+  '@types/markdown-it-container': ^2.0.5
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react': ^3.1.0
@@ -10,6 +15,7 @@ specifiers:
   markdown-it: ^13.0.1
   markdown-it-attrs: ^4.1.6
   markdown-it-container: ^3.0.0
+  markdown-it-imsize: ^2.0.1
   puppeteer: ^19.6.3
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -24,6 +30,11 @@ dependencies:
 
 devDependencies:
   '@rollup/pluginutils': 5.0.2
+  '@types/fs-extra': 11.0.1
+  '@types/html-minifier-terser': 7.0.0
+  '@types/markdown-it': 12.2.3
+  '@types/markdown-it-attrs': 4.1.0
+  '@types/markdown-it-container': 2.0.5
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   '@vitejs/plugin-react': 3.1.0_vite@4.1.1
@@ -32,6 +43,7 @@ devDependencies:
   markdown-it: 13.0.1
   markdown-it-attrs: 4.1.6_markdown-it@13.0.1
   markdown-it-container: 3.0.0
+  markdown-it-imsize: 2.0.1
   puppeteer: 19.6.3
   sass: 1.58.0
   typescript: 4.9.5
@@ -645,10 +657,53 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
+  /@types/fs-extra/11.0.1:
+    resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
+    dependencies:
+      '@types/jsonfile': 6.1.1
+      '@types/node': 18.11.19
+    dev: true
+
+  /@types/html-minifier-terser/7.0.0:
+    resolution: {integrity: sha512-hw3bhStrg5e3FQT8qZKCJTrzt/UbEaunU1xRWJ+aNOTmeBMvE3S4Ml2HiiNnZgL8izu0LFVkHUoPFXL1s5QNpQ==}
+    dev: true
+
+  /@types/jsonfile/6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.11.19
+    dev: true
+
+  /@types/linkify-it/3.0.2:
+    resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
+    dev: true
+
+  /@types/markdown-it-attrs/4.1.0:
+    resolution: {integrity: sha512-ILGUUJf7gydzxY3FrN2XwFT/f6rfxtkXZal478Jf4vqFn2AkQCwGCTx3TI+IPT+5ipOf+hUplem8wfVuCyK/Pw==}
+    dependencies:
+      '@types/markdown-it': 12.2.3
+    dev: true
+
+  /@types/markdown-it-container/2.0.5:
+    resolution: {integrity: sha512-8v5jIC5gcCUv+JcD0DExwNBkoKC0kLB4acensF0NoNlTIcXmQxF3RDjzAdIW82sXSoR+n772ePguxIWlq2ELvA==}
+    dependencies:
+      '@types/markdown-it': 12.2.3
+    dev: true
+
+  /@types/markdown-it/12.2.3:
+    resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
+    dependencies:
+      '@types/linkify-it': 3.0.2
+      '@types/mdurl': 1.0.2
+    dev: true
+
+  /@types/mdurl/1.0.2:
+    resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
+    dev: true
+
   /@types/node/18.11.19:
     resolution: {integrity: sha512-YUgMWAQBWLObABqrvx8qKO1enAvBUdjZOAWQ5grBAkp5LQv45jBvYKZ3oFS9iKRCQyFjqw6iuEa1vmFqtxYLZw==}
     dev: true
-    optional: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -1375,6 +1430,10 @@ packages:
 
   /markdown-it-container/3.0.0:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
+    dev: true
+
+  /markdown-it-imsize/2.0.1:
+    resolution: {integrity: sha512-5SH90ademqcR8ifQCBXRCfIR4HGfZZOh5pO0j2TglulfSQH+SBXM4Iw/QlTUbSoUwVZArCYgECoMvktDS2kP3w==}
     dev: true
 
   /markdown-it/13.0.1:
