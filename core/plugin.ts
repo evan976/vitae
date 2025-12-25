@@ -49,8 +49,10 @@ export default function plugin(options: {
           })
         }
       }
+    },
 
-      pdfBuilder({
+    async closeBundle() {
+      await pdfBuilder({
         name: pdfName,
         margin: pdfMargin
       })
