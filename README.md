@@ -1,10 +1,6 @@
-<p align="center">
-  <b style="font-size: 24px;">Vitae</b>
-</p>
+# Vitae
 
-<p align="center">
-  <b>A minimal Markdown-based resume generator that outputs both HTML and PDF.</b>
-</p>
+A minimal Markdown-based resume generator that outputs both HTML and PDF.
 
 > _Vitae_ - from Latin "Curriculum Vitae", also a nod to Vite.
 
@@ -59,13 +55,11 @@ pnpm build
 3. Configure output settings in `vite.config.ts`:
 
 ```typescript
-import { ThemeName } from './core/themes'
-
 markdownToResume({
   pdfName: 'Your_Name_Resume',
   webTitle: 'Your Name - Resume',
   pdfMargin: 0,
-  theme: ThemeName.Ocean,
+  theme: 'ocean',
 })
 ```
 
@@ -73,24 +67,22 @@ markdownToResume({
 
 8 built-in color themes are available:
 
-| Theme                | Name           | Description                                |
-| -------------------- | -------------- | ------------------------------------------ |
-| `ThemeName.Ocean`    | Ocean Blue     | Classic deep blue, professional and stable |
-| `ThemeName.Forest`   | Forest Green   | Natural and fresh green tones              |
-| `ThemeName.Violet`   | Elegant Violet | Sophisticated and mysterious purple tones  |
-| `ThemeName.Sunset`   | Sunset Orange  | Warm and vibrant orange tones              |
-| `ThemeName.Rose`     | Rose Red       | Elegant and soft rose tones                |
-| `ThemeName.Midnight` | Midnight Black | Calm and restrained dark tones             |
-| `ThemeName.Sky`      | Sky Blue       | Bright and refreshing light blue tones     |
-| `ThemeName.Amber`    | Amber Gold     | Elegant and luxurious golden tones         |
+| Theme      | Name           | Description                                |
+| ---------- | -------------- | ------------------------------------------ |
+| `ocean`    | Ocean Blue     | Classic deep blue, professional and stable |
+| `forest`   | Forest Green   | Natural and fresh green tones              |
+| `violet`   | Elegant Violet | Sophisticated and mysterious purple tones  |
+| `sunset`   | Sunset Orange  | Warm and vibrant orange tones              |
+| `rose`     | Rose Red       | Elegant and soft rose tones                |
+| `midnight` | Midnight Black | Calm and restrained dark tones             |
+| `sky`      | Sky Blue       | Bright and refreshing light blue tones     |
+| `amber`    | Amber Gold     | Elegant and luxurious golden tones         |
 
 To change the theme, update the `theme` option in `vite.config.ts`:
 
 ```typescript
-import { ThemeName } from './core/themes'
-
 // Use forest green theme
-theme: ThemeName.Forest
+theme: 'forest'
 ```
 
 ## Project Structure
